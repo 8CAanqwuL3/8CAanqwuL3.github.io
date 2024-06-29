@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- All content ownned by Silver Savvy, LLC. Images used subject to requirements at 
+<!-- All content owned by Silver Savvy, LLC. Images used subject to requirements at 
      https://designer.microsoft.com/termsOfUse.pdf. -->
 
 <html lang="en">
@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
 <div class="header">
   <div class="header-row">
     <h1>SILVER SAVVY, LLC</h1>
@@ -27,7 +28,16 @@
   </div>
 </div>
 
-<img src="Images\Couple1.jpg" alt="Main Image" class="main-image">
+<img ID="randomImage" src="" alt="Main Image" class="main-image">
+
+<script>
+var images = ["Images/Couple1.jpg", "Images/Couple2.jpg", "Images/Couple3.jpg", "Images/Couple4.jpg"];
+function pickRandomImage() {
+  var index = Math.floor(Math.random() * images.length);
+  document.getElementById("randomImage").src = images[index];
+}
+window.onload = pickRandomImage;
+</script>
 
 <div class="banner">
   <p>Operations in Stealth Mode</p>
